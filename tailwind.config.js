@@ -13,7 +13,10 @@ module.exports = {
         "geist-regular": ["GeistRegular", "sans-serif"],
       },
       colors: {
-        "primary": "#205619",
+        "primary": "#FFFFFF",
+        "secondary": "#333333",
+        "green": "#205619",
+        "border": "#B0B0B0",
         
       }
     },
