@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { useRef, useState } from "react";
 import { useRouter } from "expo-router";
+import CustomButton from "@/components/CustomButton";
 
 const { width } = Dimensions.get("window");
 
@@ -101,44 +102,21 @@ export default function Onboarding() {
               {/* Button Row */}
               <View className="flex-row items-center justify-between mt-20 w-full">
                 {currentIndex !== slides.length - 1 && (
-                  <Pressable
-                    onPress={() => router.push("/sign-in")}
-                    className="py-4 px-12 border border-white rounded-[16px]"
-                  >
-                    <Text className="text-white font-geist-medium text-[16px]">
-                      Skip
-                    </Text>
-                  </Pressable>
+                  <CustomButton
+                    title="Skip"
+                    handlePress={() => router.push("/sign-in")}
+                    containerStyles="border border-white" />
                 )}
 
                 {currentIndex === slides.length - 1 ? (
                   <View className="flex items-center w-full">
-                    <Pressable
-                      onPress={() => router.push("/sign-up")}
-                      className="bg-green py-4 px-12 rounded-[16px] mb-5 w-full"
-                    >
-                      <Text className="text-white font-geist-medium  text-[16px] text-center">
-                        Create an account
-                      </Text>
-                    </Pressable>
-                    <Pressable
-                      onPress={() => router.push("/sign-in")}
-                      className="border border-white py-4 px-12 rounded-[16px] w-full"
-                    >
-                      <Text className="text-white font-geist-medium text-[16px] text-center">
-                        Login
-                      </Text>
-                    </Pressable>
+                    
+                    <CustomButton title="Create an account" handlePress={()=> router.push('/sign-up')} containerStyles="bg-green mb-5 w-full"   />
+                  
+                    <CustomButton title="Login" handlePress={()=> router.push('/sign-in')} containerStyles="border border-white w-full" />
                   </View>
                 ) : (
-                  <Pressable
-                    onPress={handleNext}
-                    className="py-4 px-12 bg-green rounded-[16px]"
-                  >
-                    <Text className="text-white font-geist-medium text-[16px]">
-                      Next
-                    </Text>
-                  </Pressable>
+                  <CustomButton title="Next" handlePress={handleNext} containerStyles="bg-green" />
                 )}
               </View>
             </View>
