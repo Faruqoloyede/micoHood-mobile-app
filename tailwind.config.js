@@ -16,6 +16,7 @@ module.exports = {
         "primary": "#FFFFFF",
         "secondary": "#333333",
         "green": "#205619",
+        "green-light": "#2A7221",
         "border": "#B0B0B0",
         
       }

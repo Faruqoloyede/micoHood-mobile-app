@@ -79,7 +79,7 @@ export default function Onboarding() {
             resizeMode="cover"
             className="w-screen h-full"
           >
-            <View className="flex-1 justify-center items-center pt-32 bg-black/50 px-5 w-full min-h-[85vh]">
+            <View className="flex-1 justify-center items-center pt-56 bg-black/50 px-5 w-full min-h-[85vh]">
               <Text className="text-white text-[24px] leading-[32px] font-geist-bold font-bold text-center px-4">
                 {item.title}
               </Text>
