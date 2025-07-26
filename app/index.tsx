@@ -63,7 +63,7 @@ export default function Onboarding() {
   const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 });
 
   return (
-    <SafeAreaView className="flex-1 bg-black">
+    <SafeAreaView className="flex-1">
       <FlatList
         data={slides}
         ref={flatListRef}
@@ -79,7 +79,7 @@ export default function Onboarding() {
             resizeMode="cover"
             className="w-screen h-full"
           >
-            <View className="flex-1 justify-center items-center pt-56 bg-black/50 px-5 w-full min-h-[85vh]">
+            <View className="flex-1 justify-center items-center pt-60 bg-black/50 px-5 w-full min-h-[85vh]">
               <Text className="text-white text-[24px] leading-[32px] font-geist-bold font-bold text-center px-4">
                 {item.title}
               </Text>
@@ -106,6 +106,7 @@ export default function Onboarding() {
                     title="Skip"
                     handlePress={() => router.push("/sign-in")}
                     containerStyles="border border-white" />
+  
                 )}
 
                 {currentIndex === slides.length - 1 ? (
