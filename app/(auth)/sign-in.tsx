@@ -40,7 +40,7 @@ const SignIn = () => {
             </View>
             <CustomButton title='Login' handlePress={handleLogin} containerStyles='bg-green mt-5 w-full' isLoading={isSubmitting} /> 
           </View>
-          <View className="flex-row items-center my-4">
+          <View className="flex-row items-center my-2">
             <View className='h-2 bg-[#E5E5E5] w-[101px]' />
             <Text className="mx-2 text-gray-500 text-sm">OR</Text>
             <View className='h-2 bg-[#E5E5E5] w-[101px]' />

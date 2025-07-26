@@ -44,7 +44,7 @@ const SignUp = () => {
               Create Account
             </Text>
 
-            <View className="w-full mt-16 space-y-5">
+            <View className="w-full mt-12 space-y-5">
               <FormField
                 title="Full Name"
                 value={form.fullname}
