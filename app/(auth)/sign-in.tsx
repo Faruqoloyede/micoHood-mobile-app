@@ -1,12 +1,12 @@
-import { View, Text, ScrollView, Image, Pressable } from 'react-native'
-import React, { useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import logo from '@/assets/images/logo.png'
-import FormField from '@/components/FormField'
 import CustomButton from '@/components/CustomButton'
-import Checkbox from 'expo-checkbox';
-import { Link } from 'expo-router'
+import FormField from '@/components/FormField'
 import Socialmedia from '@/components/Socialmedia'
+import Checkbox from 'expo-checkbox'
+import { Link } from 'expo-router'
+import React, { useState } from 'react'
+import { Image, ScrollView, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -36,7 +36,7 @@ const SignIn = () => {
                 <Checkbox color={rememberMe ? "#2A7221": ""}  value={rememberMe} onValueChange={setRememberMe} />
                 <Text className='text-secondary font-geist-regular ml-3'>Remember Me</Text>
               </View>
-              <Text className='text-green-light'>Forgot Password?</Text>
+              <Text className='text-green-light'><Link href='/forgetPassword'>Forgot Password?</Link></Text>
             </View>
             <CustomButton title='Login' handlePress={handleLogin} containerStyles='bg-green mt-5 w-full' isLoading={isSubmitting} /> 
           </View>

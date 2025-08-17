@@ -1,9 +1,9 @@
-import { View, Text, TextInput, TextInputProps, Pressable } from 'react-native';
-import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react-native'; // Make sure to install lucide-react-native
+import React, { useState } from 'react';
+import { Pressable, Text, TextInput, TextInputProps, View } from 'react-native';
 
 type PropsType = {
-  title: string;
+  title?: string;
   value: string;
   placeholder?: string;
   inputStyle?: string;
